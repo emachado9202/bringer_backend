@@ -4,9 +4,9 @@
   "description": "Small backend for bringer app",
   "main": "dist/app.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "tsc && node dist/app.js",
     "build": "tsc",
-    "dev": "ts-node src/app.ts"
+    "dev": "PORT=3001 ts-node src/app.ts"
   },
   "keywords": [],
   "author": "",

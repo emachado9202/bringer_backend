@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 import axios from 'axios';
+import { env } from 'process';
 
 const app = express();
 
@@ -39,5 +40,5 @@ app.get('/tracking_parcel', async (req: Request, res: Response) => {
   }
 });
 
-const PORT = 3000;
+const PORT = env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
